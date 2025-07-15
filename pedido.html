@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finalizar Pedido - JS Eventos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      padding: 20px;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    h1 {
+      color: #27ae60;
+      text-align: center;
+    }
+
+    .resumo,
+    form {
+      background: #fff;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    .resumo img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #219150;
+    }
+
+    .botao-voltar {
+      display: block;
+      max-width: 400px;
+      margin: 0 auto 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .botao-voltar:hover {
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Finalizar Pedido</h1>
+
+  <div class="resumo" id="resumo-produto">
+    <!-- Produto escolhido será mostrado aqui -->
+  </div>
+
+  <form id="form-pedido">
+    <label for="nome">Seu nome:</label>
+    <input type="text" id="nome" required>
+
+    <label for="endereco">Endereço do evento:</label>
+    <input type="text" id="endereco" required>
+
+    <label for="dataEvento">Data do evento:</label>
+    <input type="date" id="dataEvento" required min="">
+
+    <button type="submit">Confirmar e enviar para WhatsApp</button>
+  </form>
+
+  <a href="index.html" class="botao-voltar">← Voltar ao Catálogo</a>
+
+  <script src="pedido.js"></script>
+
+</body>
+</html>
