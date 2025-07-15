@@ -22,6 +22,12 @@ resumoDiv.innerHTML = `
 const hoje = new Date().toISOString().split('T')[0];
 document.getElementById('dataEvento').setAttribute('min', hoje);
 
+// ✅ Função para formatar data
+function formatarData(dataISO) {
+  const [ano, mes, dia] = dataISO.split("-");
+  return `${dia}/${mes}/${ano}`;
+}
+
 // Ao enviar o formulário
 document.getElementById('form-pedido').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -35,9 +41,11 @@ document.getElementById('form-pedido').addEventListener('submit', function (e) {
     return;
   }
 
+  const dataFormatada = formatarData(dataEvento);
+
   const textoMensagem =
     `Olá! Quero alugar:\n- ${produto}: R$ ${preco.toFixed(2)}\n\n` +
-    `Nome: ${nome}\nEndereço: ${endereco}\nData do evento: ${dataEvento}`;
+    `Nome: ${nome}\nEndereço: ${endereco}\nData do evento: ${dataFormatada}`;
 
   const mensagem = encodeURIComponent(textoMensagem);
   const numero = '5587988664802';
