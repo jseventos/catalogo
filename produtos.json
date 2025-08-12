@@ -76,6 +76,6 @@
   { "nome": "Ursinho Azul Baloeiro", "preco": 100, "imagem": "imagens/ursinho.azul.baloeiro.webp" },
   { "nome": "Ursinho Princesa", "preco": 100, "imagem": "imagens/ursinho.princesa.webp" },
   { "nome": "Verde Floral com Tapete Verde", "preco": 100, "imagem": "imagens/verde.floral.com.tapete.verde.webp" },
-  { "nome": "Verde Floral", "preco": 100, "imagem": "imagens/verde.floral.webp" }
+  { "nome": "Verde Floral", "preco": 100, "imagem": "imagens/verde.floral.webp" },
   { "nome": "Sonic com Arco de Balões", "preco": 230, "imagem": "imagens/sonic.com.arco.de.baloes.webp" }
 ]
