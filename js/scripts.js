@@ -18,7 +18,7 @@ window.onload = function () {
   });
 
   // Carrega produtos
-  fetch('https://sandersonlucas.github.io/JS/produtos.json')
+  fetch('produtos.json')
     .then(response => response.json())
     .then(produtos => {
       produtos.sort((a, b) => a.nome.localeCompare(b.nome));
